@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DETALE – Utleie og leie enkelt for alle</title>
+  <meta name="description" content="DETALE kobler utleiere og leietakere gjennom en strukturert, trygg og friksjonsfri prosess. Alt du trenger, på ett sted." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DETALE – Utleie og leie enkelt for alle" />
+  <meta property="og:description" content="Finn din perfekte leietaker eller bolig. Verifiserte profiler, smart filtrering og alt samlet på ett sted." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nb_NO" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'><path d='M14 2L2 11h3v15h8v-9h2v9h8V11h3L14 2z' fill='%231B3A6B'/><circle cx='14' cy='15' r='2' fill='%232563EB'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo" aria-label="DETALE forsiden">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <path d="M14 2L2 11h3v15h8v-9h2v9h8V11h3L14 2z" fill="#1B3A6B"/>
+          <path d="M10 19a4 4 0 0 1 8 0" stroke="#2563EB" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <circle cx="14" cy="15" r="2" fill="#2563EB"/>
+        </svg>
+        <span>DETALE</span>
+      </a>
+      <nav class="nav-links" aria-label="Hovednavigasjon">
+        <a href="#how-it-works">Hvordan det fungerer</a>
+        <a href="#features">Funksjoner</a>
+        <a href="#trust">Trygghet</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#waitlist" class="btn btn-ghost">Logg inn</a>
+        <a href="#waitlist" class="btn btn-primary">Kom i gang</a>
+      </div>
+      <button class="hamburger" aria-label="Åpne meny" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <circle cx="7" cy="7" r="7" fill="#2563EB"/>
+              <path d="M4 7l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Lanseres i Oslo
+          </div>
+          <h1>Finn din perfekte<br/><span class="highlight">leietaker eller bolig</span></h1>
+          <p class="hero-sub">DETALE kobler utleiere og leietakere gjennom en strukturert, trygg og friksjonsfri prosess. Alt du trenger, på ett sted.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary btn-lg" onclick="openProfile('tenant')">Jeg er leietaker</button>
+            <button class="btn btn-secondary btn-lg" onclick="openProfile('landlord')">Jeg er utleier</button>
+          </div>
+          <p class="hero-sub-note">Gratis å komme i gang · Ingen kredittkort kreves</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="mock-card animate-card-1">
+            <div class="mock-card-header">
+              <div class="mock-avatar"></div>
+              <div>
+                <div class="mock-line wide"></div>
+                <div class="mock-line narrow"></div>
+              </div>
+              <span class="mock-badge">Verifisert</span>
+            </div>
+            <div class="mock-tags">
+              <span class="tag">Ingen dyr</span>
+              <span class="tag">Ikke-røyker</span>
+              <span class="tag">Fast jobb</span>
+              <span class="tag">3 referanser</span>
+            </div>
+            <div class="mock-score">
+              <span class="score-label">Matchscore</span>
+              <span class="score-value">94%</span>
+            </div>
+          </div>
+          <div class="mock-card mock-card-sm animate-card-2">
+            <div class="mock-line medium"></div>
+            <div class="mock-line narrow"></div>
+            <div class="mock-pill green">Kredittscore: Utmerket</div>
+          </div>
+          <div class="mock-card mock-card-sm animate-card-3">
+            <div style="font-size:12px;font-weight:600;color:var(--text-muted);margin-bottom:8px;">Nye søkere i dag</div>
+            <div style="font-size:28px;font-weight:800;color:var(--primary);">12</div>
+            <div style="font-size:12px;color:var(--success);font-weight:600;margin-top:4px;">▲ 3 fra i går</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">30%</span>
+          <span class="stat-label">av Oslos boliger er utleieboliger</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">på ventelisten allerede</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-number">&lt; 5 min</span>
+          <span class="stat-label">å opprette en verifisert profil</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-number">1 app</span>
+          <span class="stat-label">for alt – kontrakt, betaling, forsikring</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="problem">
+      <div class="container">
+        <div class="section-label">Problemet i dag</div>
+        <h2>Leiemarkedet er kaotisk –<br/>for begge parter</h2>
+        <p class="problem-intro">Meldinger hoper seg opp, uaktuelle søkere kaster bort alles tid, og kontrakter, forsikring og betaling håndteres på tre forskjellige steder. Det finnes en bedre måte.</p>
+        <div class="pain-grid">
+          <div class="pain-card">
+            <div class="pain-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+            </div>
+            <h3>Drukner i meldinger</h3>
+            <p>Utleiere får hundrevis av ustrukturerte henvendelser fra folk som ikke møter minimumskravene – uten mulighet til å filtrere dem vekk.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="1.8" stroke-linecap="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+            </div>
+            <h3>Ingen verifisering</h3>
+            <p>Hvem er egentlig personen på den andre siden? Kredittsjekk, referanser og arbeidssituasjon må sjekkes manuelt – om du husker det.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="1.8" stroke-linecap="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <h3>Alt på ulike plattformer</h3>
+            <p>Annonser, kontrakter, betaling og forsikring håndteres på forskjellige tjenester. Ingen sammenheng, ingen oversikt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALT SAMLET -->
+    <section class="all-in-one">
+      <div class="container aio-inner">
+        <div class="aio-text">
+          <div class="section-label">Alt samlet</div>
+          <h2>Én app. Alt du trenger.</h2>
+          <p>Det er ikke bare en utleieplattform. DETALE er det eneste verktøyet du trenger – fra første annonsering til siste husleie.</p>
+          <ul class="aio-list">
+            <li>
+              <div class="aio-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="9" r="7"/><path d="M6 9l2 2 4-4"/></svg>
+              </div>
+              <div>
+                <strong>Annonser og søk</strong>
+                <span>Legg ut bolig eller finn din neste – alt i samme app</span>
+              </div>
+            </li>
+            <li>
+              <div class="aio-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="5" width="14" height="10" rx="2"/><path d="M5 5V4a4 4 0 0 1 8 0v1"/></svg>
+              </div>
+              <div>
+                <strong>Digitale kontrakter</strong>
+                <span>Juridisk gyldige leiekontrakter, signert direkte i appen</span>
+              </div>
+            </li>
+            <li>
+              <div class="aio-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="4" width="16" height="12" rx="2"/><path d="M1 8h16"/></svg>
+              </div>
+              <div>
+                <strong>Betaling og regnskap</strong>
+                <span>Automatisk husleieinnkreving med ferdig regnskap</span>
+              </div>
+            </li>
+            <li>
+              <div class="aio-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"><path d="M9 2s6 2.5 6 7.5v3.5L9 16l-6-3V9.5C3 4.5 9 2 9 2z"/></svg>
+              </div>
+              <div>
+                <strong>Forsikring</strong>
+                <span>Tegn innbo- og leieboligforsikring uten å forlate DETALE</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="aio-visual" aria-hidden="true">
+          <div class="aio-phone">
+            <div class="aio-phone-screen">
+              <div class="aio-nav-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="aio-app-row">
+                <div class="aio-app-icon blue">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M10 2L2 8h2v10h5v-6h2v6h5V8h2L10 2z"/></svg>
+                </div>
+                <div class="aio-app-label">
+                  <div class="mock-line" style="width:80px;height:8px;"></div>
+                  <div class="mock-line" style="width:50px;height:6px;margin-top:4px;"></div>
+                </div>
+                <div class="aio-app-status green-dot"></div>
+              </div>
+              <div class="aio-divider"></div>
+              <div class="aio-tiles">
+                <div class="aio-tile">
+                  <div style="font-size:11px;font-weight:600;color:var(--text-muted);">Husleie</div>
+                  <div style="font-size:17px;font-weight:800;color:var(--primary);">12 500</div>
+                  <div style="font-size:10px;color:var(--success);font-weight:600;">Betalt</div>
+                </div>
+                <div class="aio-tile">
+                  <div style="font-size:11px;font-weight:600;color:var(--text-muted);">Kontrakt</div>
+                  <div style="font-size:12px;font-weight:700;color:var(--text);margin-top:4px;">Aktiv</div>
+                  <div style="font-size:10px;color:var(--text-muted);">t.o.m. des 25</div>
+                </div>
+                <div class="aio-tile">
+                  <div style="font-size:11px;font-weight:600;color:var(--text-muted);">Forsikring</div>
+                  <div style="font-size:12px;font-weight:700;color:var(--text);margin-top:4px;">Aktiv</div>
+                  <div style="font-size:10px;color:var(--success);font-weight:600;">Dekket</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-label">Slik fungerer det</div>
+        <h2>En enkel og strukturert prosess</h2>
+        <div class="tabs">
+          <button class="tab active" data-tab="tenant">For leietakere</button>
+          <button class="tab" data-tab="landlord">For utleiere</button>
+        </div>
+        <div class="steps" id="tab-tenant">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Opprett din profil</h3>
+              <p>Fyll inn informasjon om deg selv, arbeidssituasjon, referanser og preferanser. Kredittsjekk gjennomføres trygt og enkelt – én gang.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Utforsk boliger</h3>
+              <p>Bla gjennom tilgjengelige boliger tilpasset dine behov. Registrer interesse med ett klikk – utleieren ser profilen din umiddelbart.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Flytt inn trygt</h3>
+              <p>Kontrakt, forsikring og betaling – alt skjer i DETALE. Ingen runder mellom ulike tjenester. Bare nøklene igjen.</p>
+            </div>
+          </div>
+        </div>
+        <div class="steps hidden" id="tab-landlord">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Legg ut boligen din</h3>
+              <p>Opprett en boligannonse og sett dine preferanser – røyking, dyr, leieperiode, parkeringsbehov. DETALE filtrerer søkerne for deg.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Se verifiserte søkere</h3>
+              <p>Alle interessenter er samlet på ett sted med komplett profil – kredittsjekk, referanser og arbeidssituasjon inkludert. Ingen usikkerhet.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Velg den rette</h3>
+              <p>Bruk smarte filtre og matchscore for å finne den beste kandidaten. Inngå kontrakt direkte i appen – trygt og juridisk gyldig.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-label">Funksjoner</div>
+        <h2>Alt du trenger – samlet på ett sted</h2>
+        <div class="features-grid">
+          <div class="feature-card feature-card-large">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                <path d="M4 6h16M6 10h12M8 14h8"/>
+                <circle cx="21" cy="19" r="5"/>
+                <path d="M19 19l1.5 1.5L23 18"/>
+              </svg>
+            </div>
+            <h3>Smart filtrering og matchscore</h3>
+            <p>Finn kandidater basert på dyreeier, røyking, leieperiode, parkeringsbehov og mye mer. Ingen mer manuell sortering – DETALE gjør jobben for deg.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <path d="M22 4 12 14.01l-3-3"/>
+              </svg>
+            </div>
+            <h3>Verifiserte profiler</h3>
+            <p>Kredittsjekk og referanser integrert direkte i profilen.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                <rect x="3" y="11" width="22" height="11" rx="2"/>
+                <path d="M7 11V7a7 7 0 0 1 14 0v4"/>
+              </svg>
+            </div>
+            <h3>Sikre kontrakter</h3>
+            <p>Digitale leiekontrakter laget og signert direkte i appen.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                <rect x="2" y="6" width="20" height="14" rx="2"/>
+                <path d="M2 10h20"/>
+              </svg>
+            </div>
+            <h3>Betaling og regnskap</h3>
+            <p>Husleie og regnskap håndteres automatisk i plattformen.</p>
+          </div>
+          <div class="feature-card feature-card-large">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                <path d="M14 3s8 3 8 9v4l-8 4-8-4v-4c0-6 8-9 8-9z"/>
+                <path d="M10 13l2.5 2.5 5-5"/>
+              </svg>
+            </div>
+            <h3>Forsikring inkludert</h3>
+            <p>Enkel tilgang på innbo- og leieboligforsikring. Få tilbud og tegn forsikring uten å forlate DETALE – fra samme skjerm der du betaler husleien.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="trust" id="trust">
+      <div class="container trust-inner">
+        <div class="trust-text">
+          <div class="section-label">Trygghet</div>
+          <h2>Bygget for trygghet – på begge sider</h2>
+          <p>Vi forstår at et leieforhold krever tillit. Derfor har vi bygget DETALE med sikkerhet og transparens som fundament.</p>
+          <ul class="trust-list">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="10" cy="10" r="10" fill="#DBEAFE"/>
+                <path d="M6 10l3 3 5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Kredittsjekk og ID-verifisering
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="10" cy="10" r="10" fill="#DBEAFE"/>
+                <path d="M6 10l3 3 5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Verifiserte referanser fra tidligere utleiere
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="10" cy="10" r="10" fill="#DBEAFE"/>
+                <path d="M6 10l3 3 5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Kryptert kommunikasjon og databeskyttelse (GDPR)
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="10" cy="10" r="10" fill="#DBEAFE"/>
+                <path d="M6 10l3 3 5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Juridisk gyldig digital signatur på kontrakter
+            </li>
+          </ul>
+        </div>
+        <div class="trust-visual" aria-hidden="true">
+          <div class="trust-card">
+            <div class="trust-card-top">
+              <div class="mock-avatar large"></div>
+              <div>
+                <div class="mock-line wide"></div>
+                <div class="mock-line narrow"></div>
+              </div>
+            </div>
+            <div class="trust-checks">
+              <div class="check-row">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="8" fill="#22C55E"/>
+                  <path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                ID verifisert
+              </div>
+              <div class="check-row">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="8" fill="#22C55E"/>
+                  <path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Kredittscore: Utmerket
+              </div>
+              <div class="check-row">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="8" fill="#22C55E"/>
+                  <path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                3 referanser verifisert
+              </div>
+              <div class="check-row">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="8" fill="#22C55E"/>
+                  <path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Fast arbeidssituasjon bekreftet
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WAITLIST / CTA -->
+    <section class="waitlist" id="waitlist">
+      <div class="container waitlist-inner">
+        <div class="section-label light">Kom i gang</div>
+        <h2>Bli en av de første</h2>
+        <p>DETALE lanseres i Oslo. Meld deg på ventelisten og vær blant de første som opplever et leiemarked uten kaos.</p>
+        <form class="waitlist-form" novalidate aria-label="Venteliste-registrering">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Navn</label>
+              <input type="text" id="name" name="name" placeholder="Ola Nordmann" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-postadresse</label>
+              <input type="email" id="email" name="email" placeholder="ola@eksempel.no" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="form-group role-group">
+            <fieldset>
+              <legend>Jeg er:</legend>
+              <div class="radio-options">
+                <label class="radio-label">
+                  <input type="radio" name="role" value="tenant" checked />
+                  <span>Leietaker</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="role" value="landlord" />
+                  <span>Utleier</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <button type="submit" class="btn btn-cta btn-lg">Meld meg på ventelisten</button>
+          <p class="form-note">Vi deler aldri informasjonen din med tredjepart.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#" class="logo logo-footer" aria-label="DETALE forsiden">
+        <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <path d="M14 2L2 11h3v15h8v-9h2v9h8V11h3L14 2z" fill="#fff" opacity="0.9"/>
+        </svg>
+        <span>DETALE</span>
+      </a>
+      <p class="footer-tagline">Gjør utleie og leie enkelt for alle.</p>
+      <div class="footer-links">
+        <a href="#">Personvern</a>
+        <a href="#">Vilkår</a>
+        <a href="#">Kontakt</a>
+      </div>
+      <p class="footer-copy">© 2025 DETALE SB. Studentbedrift.</p>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta" aria-hidden="true">
+    <a href="#waitlist" class="btn btn-cta btn-lg sticky-cta-btn">Meld deg på ventelisten</a>
+  </div>
+
+  <!-- PROFILE MODAL -->
+  <div class="profile-overlay" id="profileOverlay" role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+    <div class="profile-modal">
+      <div class="profile-modal-header">
+        <div>
+          <p class="profile-role-label" id="profileRoleLabel"></p>
+          <h2 id="profileTitle">Opprett din profil</h2>
+        </div>
+        <button class="profile-close" onclick="closeProfile()" aria-label="Lukk">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/>
+          </svg>
+        </button>
+      </div>
+
+      <form class="profile-form" id="profileForm" novalidate>
+        <div class="profile-section-title">Personalia</div>
+        <div class="profile-row">
+          <div class="profile-group">
+            <label for="pf-firstname">Fornavn</label>
+            <input type="text" id="pf-firstname" placeholder="Ola" autocomplete="given-name" required />
+          </div>
+          <div class="profile-group">
+            <label for="pf-lastname">Etternavn</label>
+            <input type="text" id="pf-lastname" placeholder="Nordmann" autocomplete="family-name" required />
+          </div>
+        </div>
+        <div class="profile-row">
+          <div class="profile-group">
+            <label for="pf-email">E-postadresse</label>
+            <input type="email" id="pf-email" placeholder="ola@eksempel.no" autocomplete="email" required />
+          </div>
+          <div class="profile-group">
+            <label for="pf-phone">Telefonnummer</label>
+            <input type="tel" id="pf-phone" placeholder="987 65 432" autocomplete="tel" />
+          </div>
+        </div>
+        <div class="profile-row">
+          <div class="profile-group">
+            <label for="pf-dob">Fødselsdato</label>
+            <input type="date" id="pf-dob" autocomplete="bday" />
+          </div>
+          <div class="profile-group">
+            <label for="pf-city">By / område</label>
+            <input type="text" id="pf-city" placeholder="Oslo" autocomplete="address-level2" />
+          </div>
+        </div>
+
+        <!-- Leietaker-felt -->
+        <div class="profile-tenant-fields">
+          <div class="profile-section-title" style="margin-top:8px;">Om deg</div>
+          <div class="profile-group">
+            <label for="pf-employment">Arbeidssituasjon</label>
+            <select id="pf-employment">
+              <option value="" disabled selected>Velg</option>
+              <option>Fast ansatt</option>
+              <option>Deltid / midlertidig</option>
+              <option>Student</option>
+              <option>Selvstendig næringsdrivende</option>
+              <option>Annet</option>
+            </select>
+          </div>
+          <div class="profile-row profile-row-3">
+            <div class="profile-group">
+              <label>Røyker?</label>
+              <div class="toggle-group">
+                <label class="toggle-label"><input type="radio" name="smoker" value="nei" checked/><span>Nei</span></label>
+                <label class="toggle-label"><input type="radio" name="smoker" value="ja"/><span>Ja</span></label>
+              </div>
+            </div>
+            <div class="profile-group">
+              <label>Dyr?</label>
+              <div class="toggle-group">
+                <label class="toggle-label"><input type="radio" name="pets" value="nei" checked/><span>Nei</span></label>
+                <label class="toggle-label"><input type="radio" name="pets" value="ja"/><span>Ja</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Utleier-felt -->
+        <div class="profile-landlord-fields">
+          <div class="profile-section-title" style="margin-top:8px;">Om boligen</div>
+          <div class="profile-row">
+            <div class="profile-group">
+              <label for="pf-address">Adresse</label>
+              <input type="text" id="pf-address" placeholder="Storgata 1, Oslo" />
+            </div>
+            <div class="profile-group">
+              <label for="pf-rent">Månedlig leie (kr)</label>
+              <input type="number" id="pf-rent" placeholder="12 500" min="0" />
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg profile-submit">Opprett profil</button>
+        <p class="profile-note">Ingen kredittkort kreves · GDPR-sikker lagring</p>
+      </form>
+
+      <!-- Suksess-state -->
+      <div class="profile-success" id="profileSuccess">
+        <div class="profile-success-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="20" fill="#DCFCE7"/>
+            <path d="M12 20l5.5 5.5 10.5-11" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Profil opprettet!</h3>
+        <p>Vi sender deg en bekreftelse på e-post. Du blir varslet når DETALE lanseres i Oslo.</p>
+        <button class="btn btn-primary" onclick="closeProfile()">Tilbake til forsiden</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Profile modal
+    function openProfile(role) {
+      const overlay = document.getElementById('profileOverlay');
+      const label = document.getElementById('profileRoleLabel');
+      const tenantFields = document.querySelector('.profile-tenant-fields');
+      const landlordFields = document.querySelector('.profile-landlord-fields');
+
+      label.textContent = role === 'tenant' ? 'Leietaker' : 'Utleier';
+      tenantFields.style.display = role === 'tenant' ? 'block' : 'none';
+      landlordFields.style.display = role === 'landlord' ? 'block' : 'none';
+
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('pf-firstname').focus();
+    }
+
+    function closeProfile() {
+      document.getElementById('profileOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+      document.getElementById('profileSuccess').style.display = 'none';
+      document.getElementById('profileForm').style.display = 'block';
+      document.getElementById('profileForm').reset();
+    }
+
+    // Close on overlay click
+    document.getElementById('profileOverlay').addEventListener('click', e => {
+      if (e.target === e.currentTarget) closeProfile();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeProfile();
+    });
+
+    // Profile form submit
+    document.getElementById('profileForm').addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('profileForm').style.display = 'none';
+      document.getElementById('profileSuccess').style.display = 'flex';
+    });
+
+    // Tab switching
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.steps').forEach(s => s.classList.add('hidden'));
+        document.getElementById('tab-' + target).classList.remove('hidden');
+      });
+    });
+
+    // Waitlist form submit
+    document.querySelector('.waitlist-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.textContent = 'Du er på listen!';
+      btn.disabled = true;
+      btn.style.background = '#22C55E';
+      const stickyCta = document.querySelector('.sticky-cta-btn');
+      if (stickyCta) { stickyCta.textContent = 'Du er på listen!'; stickyCta.style.background = '#22C55E'; }
+    });
+
+    // Hamburger
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('open');
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id === '#') return;
+        const target = document.querySelector(id);
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    // Hide sticky CTA when waitlist is visible
+    const waitlistSection = document.querySelector('.waitlist');
+    const stickyCta = document.querySelector('.sticky-cta');
+    if (waitlistSection && stickyCta) {
+      const observer = new IntersectionObserver(([entry]) => {
+        stickyCta.classList.toggle('hidden', entry.isIntersecting);
+      }, { threshold: 0.1 });
+      observer.observe(waitlistSection);
+    }
+
+    // Scroll fade-in
+    const animEls = document.querySelectorAll('.stat-item, .pain-card, .feature-card, .step');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) { el.target.classList.add('visible'); fadeObserver.unobserve(el.target); }
+      });
+    }, { threshold: 0.12 });
+    animEls.forEach(el => fadeObserver.observe(el));
+  </script>
+</body>
+</html>
