@@ -26,10 +26,19 @@
   <header class="navbar">
     <div class="container nav-inner">
       <a href="#" class="logo" aria-label="DETALE forsiden">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-          <path d="M14 2L2 11h3v15h8v-9h2v9h8V11h3L14 2z" fill="#1B3A6B"/>
-          <path d="M10 19a4 4 0 0 1 8 0" stroke="#2563EB" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <circle cx="14" cy="15" r="2" fill="#2563EB"/>
+        <svg width="34" height="30" viewBox="0 0 34 30" fill="none" aria-hidden="true">
+          <!-- Hus-kropp -->
+          <path d="M5 14v14h9v-8h6v8h9V14L17 2 5 14Z" fill="#1B3A6B"/>
+          <!-- Skorstein -->
+          <rect x="8" y="5" width="3" height="6" rx="0.5" fill="#1B3A6B"/>
+          <!-- Tak -->
+          <path d="M1 15L17 1l16 14" stroke="#1B3A6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Venstre arm -->
+          <path d="M5 19h5" stroke="#F5C518" stroke-width="2" stroke-linecap="round"/>
+          <!-- Høyre arm -->
+          <path d="M24 19h5" stroke="#F5C518" stroke-width="2" stroke-linecap="round"/>
+          <!-- Hender (håndtrykk) -->
+          <path d="M10 17.5c0 0 1-1 2-1s1.5.8 2.5.8S16 16.5 17 16.5s1.5.8 2.5.8 1.5-.8 2.5-.8 2 1 2 1v3c0 0-1 1-2 1s-1.5-.8-2.5-.8-1.5.8-2.5.8-1.5-.8-2.5-.8-1.5.8-2 .8-2-1-2-1v-3Z" fill="#F5C518"/>
         </svg>
         <span>DETALE</span>
       </a>
@@ -108,30 +117,143 @@
       </div>
     </section>
 
-    <!-- STATS -->
-    <section class="stats">
-      <div class="container stats-grid">
-        <div class="stat-item">
-          <span class="stat-number">30%</span>
-          <span class="stat-label">av Oslos boliger er utleieboliger</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat-item">
-          <span class="stat-number">100+</span>
-          <span class="stat-label">på ventelisten allerede</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat-item">
-          <span class="stat-number">&lt; 5 min</span>
-          <span class="stat-label">å opprette en verifisert profil</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat-item">
-          <span class="stat-number">1 app</span>
-          <span class="stat-label">for alt – kontrakt, betaling, forsikring</span>
+    <!-- INTERESSERTE PROFILER -->
+    <section class="profiles-section">
+      <div class="container">
+        <div class="section-label">Utleier-visning</div>
+        <h2>Interesserte profiler</h2>
+        <p class="profiles-intro">Slik ser det ut når leietakere melder interesse for boligen din. Alle er forhåndsverifisert – du ser det viktigste med én gang.</p>
+        <div class="profiles-grid">
+
+          <div class="profile-card" onclick="openTenantProfile(0)">
+            <div class="profile-card-img">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profil" />
+              <span class="profile-card-badge">Verifisert</span>
+            </div>
+            <div class="profile-card-info">
+              <div class="profile-card-name">Sofia A.</div>
+              <div class="profile-card-meta">28 år · Fast ansatt · Oslo</div>
+            </div>
+            <button class="btn btn-primary profile-see-btn">Se profil</button>
+          </div>
+
+          <div class="profile-card" onclick="openTenantProfile(1)">
+            <div class="profile-card-img">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profil" />
+              <span class="profile-card-badge">Verifisert</span>
+            </div>
+            <div class="profile-card-info">
+              <div class="profile-card-name">Jonas K.</div>
+              <div class="profile-card-meta">24 år · Student · Oslo</div>
+            </div>
+            <button class="btn btn-primary profile-see-btn">Se profil</button>
+          </div>
+
+          <div class="profile-card" onclick="openTenantProfile(2)">
+            <div class="profile-card-img">
+              <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profil" />
+              <span class="profile-card-badge">Verifisert</span>
+            </div>
+            <div class="profile-card-info">
+              <div class="profile-card-name">Marcus T.</div>
+              <div class="profile-card-meta">31 år · Selvstendig · Oslo</div>
+            </div>
+            <button class="btn btn-primary profile-see-btn">Se profil</button>
+          </div>
+
+          <div class="profile-card" onclick="openTenantProfile(3)">
+            <div class="profile-card-img">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Profil" />
+              <span class="profile-card-badge">Verifisert</span>
+            </div>
+            <div class="profile-card-info">
+              <div class="profile-card-name">Ingrid L.</div>
+              <div class="profile-card-meta">26 år · Fast ansatt · Oslo</div>
+            </div>
+            <button class="btn btn-primary profile-see-btn">Se profil</button>
+          </div>
+
+          <div class="profile-card" onclick="openTenantProfile(4)">
+            <div class="profile-card-img">
+              <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Profil" />
+              <span class="profile-card-badge">Verifisert</span>
+            </div>
+            <div class="profile-card-info">
+              <div class="profile-card-name">Ali R.</div>
+              <div class="profile-card-meta">29 år · Fast ansatt · Oslo</div>
+            </div>
+            <button class="btn btn-primary profile-see-btn">Se profil</button>
+          </div>
+
+          <div class="profile-card" onclick="openTenantProfile(5)">
+            <div class="profile-card-img">
+              <img src="https://randomuser.me/api/portraits/women/57.jpg" alt="Profil" />
+              <span class="profile-card-badge">Verifisert</span>
+            </div>
+            <div class="profile-card-info">
+              <div class="profile-card-name">Marta H.</div>
+              <div class="profile-card-meta">52 år · Fast ansatt · Oslo</div>
+            </div>
+            <button class="btn btn-primary profile-see-btn">Se profil</button>
+          </div>
+
+          <div class="profile-card" onclick="openTenantProfile(6)">
+            <div class="profile-card-img">
+              <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Profil" />
+              <span class="profile-card-badge">Verifisert</span>
+            </div>
+            <div class="profile-card-info">
+              <div class="profile-card-name">Camilla N.</div>
+              <div class="profile-card-meta">34 år · Fast ansatt · Oslo</div>
+            </div>
+            <button class="btn btn-primary profile-see-btn">Se profil</button>
+          </div>
+
+          <div class="profile-card" onclick="openTenantProfile(7)">
+            <div class="profile-card-img">
+              <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Profil" />
+              <span class="profile-card-badge">Verifisert</span>
+            </div>
+            <div class="profile-card-info">
+              <div class="profile-card-name">Erik S.</div>
+              <div class="profile-card-meta">38 år · Selvstendig · Oslo</div>
+            </div>
+            <button class="btn btn-primary profile-see-btn">Se profil</button>
+          </div>
+
         </div>
       </div>
     </section>
+
+    <!-- TENANT PROFILE DETAIL MODAL -->
+    <div class="profile-overlay tenant-overlay" id="tenantOverlay" role="dialog" aria-modal="true" aria-label="Leietakerprofil">
+      <div class="profile-modal tenant-profile-modal">
+        <button class="profile-close" onclick="closeTenantProfile()" aria-label="Lukk">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/>
+          </svg>
+        </button>
+        <div class="tp-header">
+          <img class="tp-photo" id="tpPhoto" src="" alt="Profilbilde" />
+          <div class="tp-header-info">
+            <div class="tp-name" id="tpName"></div>
+            <div class="tp-sub" id="tpSub"></div>
+            <span class="mock-badge" style="display:inline-block;margin-top:6px;">Verifisert</span>
+          </div>
+        </div>
+        <div class="tp-checks">
+          <div class="check-row"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#22C55E"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> ID verifisert</div>
+          <div class="check-row" id="tpCredit"></div>
+          <div class="check-row"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#22C55E"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Referanser verifisert</div>
+        </div>
+        <div class="tp-details" id="tpDetails"></div>
+        <div class="tp-tags" id="tpTags"></div>
+        <div class="tp-actions">
+          <button class="btn btn-primary btn-lg" style="flex:1;">Ta kontakt</button>
+          <button class="btn btn-secondary btn-lg" onclick="closeTenantProfile()" style="flex:1;">Lukk</button>
+        </div>
+      </div>
+    </div>
 
     <!-- PROBLEM -->
     <section class="problem">
@@ -510,8 +632,13 @@
   <footer class="footer">
     <div class="container footer-inner">
       <a href="#" class="logo logo-footer" aria-label="DETALE forsiden">
-        <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-          <path d="M14 2L2 11h3v15h8v-9h2v9h8V11h3L14 2z" fill="#fff" opacity="0.9"/>
+        <svg width="34" height="30" viewBox="0 0 34 30" fill="none" aria-hidden="true">
+          <path d="M5 14v14h9v-8h6v8h9V14L17 2 5 14Z" fill="rgba(255,255,255,0.9)"/>
+          <rect x="8" y="5" width="3" height="6" rx="0.5" fill="rgba(255,255,255,0.9)"/>
+          <path d="M1 15L17 1l16 14" stroke="rgba(255,255,255,0.9)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5 19h5" stroke="#F5C518" stroke-width="2" stroke-linecap="round"/>
+          <path d="M24 19h5" stroke="#F5C518" stroke-width="2" stroke-linecap="round"/>
+          <path d="M10 17.5c0 0 1-1 2-1s1.5.8 2.5.8S16 16.5 17 16.5s1.5.8 2.5.8 1.5-.8 2.5-.8 2 1 2 1v3c0 0-1 1-2 1s-1.5-.8-2.5-.8-1.5.8-2.5.8-1.5-.8-2.5-.8-1.5.8-2 .8-2-1-2-1v-3Z" fill="#F5C518"/>
         </svg>
         <span>DETALE</span>
       </a>
@@ -645,6 +772,47 @@
   </div>
 
   <script>
+    // Tenant profile data
+    const tenants = [
+      { name: 'Sofia A.', age: 28, city: 'Oslo', job: 'Fast ansatt', employer: 'Telenor', income: '620 000', smoker: 'Nei', pets: 'Nei', credit: 'Utmerket', refs: 2, photo: 'https://randomuser.me/api/portraits/women/44.jpg' },
+      { name: 'Jonas K.', age: 24, city: 'Oslo', job: 'Student', employer: 'BI Oslo', income: '280 000', smoker: 'Nei', pets: 'Nei', credit: 'God', refs: 1, photo: 'https://randomuser.me/api/portraits/men/32.jpg' },
+      { name: 'Marcus T.', age: 31, city: 'Oslo', job: 'Selvstendig', employer: 'Eget AS', income: '850 000', smoker: 'Nei', pets: 'Ja', credit: 'Utmerket', refs: 3, photo: 'https://randomuser.me/api/portraits/men/75.jpg' },
+      { name: 'Ingrid L.', age: 26, city: 'Oslo', job: 'Fast ansatt', employer: 'DNB', income: '580 000', smoker: 'Nei', pets: 'Nei', credit: 'Utmerket', refs: 2, photo: 'https://randomuser.me/api/portraits/women/68.jpg' },
+      { name: 'Ali R.', age: 29, city: 'Oslo', job: 'Fast ansatt', employer: 'Equinor', income: '710 000', smoker: 'Nei', pets: 'Nei', credit: 'God', refs: 2, photo: 'https://randomuser.me/api/portraits/men/11.jpg' },
+      { name: 'Marta H.', age: 52, city: 'Oslo', job: 'Fast ansatt', employer: 'OsloMet', income: '690 000', smoker: 'Nei', pets: 'Ja', credit: 'Utmerket', refs: 3, photo: 'https://randomuser.me/api/portraits/women/57.jpg' },
+      { name: 'Camilla N.', age: 34, city: 'Oslo', job: 'Fast ansatt', employer: 'NRK', income: '640 000', smoker: 'Nei', pets: 'Nei', credit: 'Utmerket', refs: 2, photo: 'https://randomuser.me/api/portraits/women/90.jpg' },
+      { name: 'Erik S.', age: 38, city: 'Oslo', job: 'Selvstendig', employer: 'Eget AS', income: '920 000', smoker: 'Ja', pets: 'Nei', credit: 'God', refs: 1, photo: 'https://randomuser.me/api/portraits/men/85.jpg' },
+    ];
+
+    function openTenantProfile(i) {
+      const t = tenants[i];
+      document.getElementById('tpPhoto').src = t.photo;
+      document.getElementById('tpName').textContent = t.name;
+      document.getElementById('tpSub').textContent = t.age + ' år · ' + t.job + ' · ' + t.city;
+      document.getElementById('tpCredit').innerHTML = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#22C55E"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Kredittscore: ${t.credit}`;
+      document.getElementById('tpDetails').innerHTML = `
+        <div class="tp-detail-row"><span>Arbeidsgiver</span><strong>${t.employer}</strong></div>
+        <div class="tp-detail-row"><span>Årsinntekt</span><strong>kr ${t.income},-</strong></div>
+        <div class="tp-detail-row"><span>Referanser</span><strong>${t.refs} verifiserte</strong></div>
+        <div class="tp-detail-row"><span>By</span><strong>${t.city}</strong></div>
+      `;
+      document.getElementById('tpTags').innerHTML =
+        `<span class="tag">${t.smoker === 'Nei' ? 'Ikke-røyker' : 'Røyker'}</span>` +
+        `<span class="tag">${t.pets === 'Nei' ? 'Ingen dyr' : 'Har dyr'}</span>` +
+        `<span class="tag">${t.job}</span>`;
+      document.getElementById('tenantOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeTenantProfile() {
+      document.getElementById('tenantOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('tenantOverlay').addEventListener('click', e => {
+      if (e.target === e.currentTarget) closeTenantProfile();
+    });
+
     // Profile modal
     function openProfile(role) {
       const overlay = document.getElementById('profileOverlay');
