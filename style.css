@@ -746,6 +746,113 @@ h1 {
   .stats { padding: 28px 0; }
 }
 
+/* =====================
+   KONTAKT OSS / TEAM
+   ===================== */
+
+.team-section {
+  padding: 96px 0 80px;
+  background: var(--primary);
+  background-image: radial-gradient(ellipse at 70% 40%, rgba(37,99,235,0.35) 0%, transparent 65%);
+}
+
+.team-section .section-label {
+  color: var(--primary-light);
+  opacity: 0.8;
+}
+
+.team-section h2 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.team-intro {
+  color: rgba(255,255,255,0.65);
+  font-size: 1.05rem;
+  margin: 12px auto 52px;
+  max-width: 520px;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-md);
+  padding: 28px 24px 24px;
+  width: 200px;
+  text-align: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.team-card:hover {
+  background: rgba(255,255,255,0.13);
+  transform: translateY(-3px);
+}
+
+.team-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--cta);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  letter-spacing: .02em;
+}
+
+.team-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 12px;
+}
+
+.team-mail {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: var(--cta);
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.15s;
+}
+
+.team-mail:hover {
+  color: var(--cta-hover);
+  text-decoration: underline;
+}
+
+.team-mail:focus-visible {
+  outline: 2px solid var(--cta);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .team-grid { gap: 14px; }
+  .team-card { width: calc(50% - 7px); }
+}
+
+@media (max-width: 480px) {
+  .team-section { padding: 64px 0; }
+  .team-card { width: 100%; }
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
